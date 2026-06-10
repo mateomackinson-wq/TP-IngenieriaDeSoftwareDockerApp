@@ -1,12 +1,12 @@
 # 🧮 Calculadora de Gastos Básica
 
-![Calculadora de Gastos Básica](images/index.jpg)
+![Calculadora de Gastos Básica](images/index.png)
 
 ## Descripción
 
 Esta es una calculadora de gastos básica que permite sumar los gastos de varias personas y dividir el total entre la cantidad de personas. Los datos se guardan en el localStorage del navegador.
 
-![Calculadora de Gastos Básica](images/index.jpg)
+![Calculadora de Gastos Básica](images/index.png)
 
 ## 🚀 Características
 
