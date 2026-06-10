@@ -22,28 +22,47 @@ Esta es una calculadora de gastos básica que permite sumar los gastos de varias
 
 ## 🛠️ Instalación y Ejecución
 
-Para ejecutar esta aplicación, necesitas tener instalado [Docker](https://www.docker.com/).
+### Paso a paso para correr la aplicación en docker utilizando github.
 
-### 1. Crear la imagen
+**Paso 1-** Tener docker instalado y en ejecución en la pc.
 
-Navega al directorio raíz del proyecto y ejecuta el siguiente comando para construir la imagen de Docker:
+**Paso 2-** Clonar el repositorio de GitHub:
+```bash
+git clone https://github.com/mateomackinson-wq/TP-IngenieriaDeSoftwareDockerApp.git
+```
 
+**Paso 3-** Abrir la consola de windows y entrar a la carpeta del proyecto:
+```bash
+cd TP-IngenieriaDeSoftwareDockerApp
+```
+
+**Paso 4-** Correr el comando que se encuentra debajo para construir la imagen de Docker localmente: (Docker leerá el Dockerfile local y empaquetará los archivos).
 ```bash
 docker build -t calculadora-gastos .
 ```
 
-### 2. Ejecutar el contenedor
-
-Una vez construida la imagen, inicia el contenedor de la siguiente manera:
-
+**Paso 5-** Correr el comando que se encuentra debajo para ejecutar el contenedor.
 ```bash
-docker run -p 8080:80 --name calculadora-gastos-app calculadora-gastos
+docker run -d -p 8080:80 --name calculadora-app-local calculadora-gastos
 ```
 
-### 3. Acceder a la aplicación
+**Paso 6-** Acceder a la aplicación, copiando el link de debajo en el navegador.
+[http://localhost:8080](http://localhost:8080)
 
-Abre tu navegador y accede a la siguiente dirección:
+<br/>
 
+### Paso a paso para correr la aplicación en docker utilizando Docker Hub.
+
+> ⚠️ **NOTA:** Si corriste la versión utilizando github previamente, recordá detener y borrar el contenedor anterior con `docker rm -f calculadora-app-local` antes de continuar.
+
+**Paso 1-** Tener docker instalado y en ejecución en la pc.
+
+**Paso 2-** Ejecutar el contenedor directamente desde el repositorio de Docker Hub:
+```bash
+docker run -d -p 8080:80 --name calculadora-app-hub mmackinsonistea/calculadora-gastos:v1.0
+```
+
+**Paso 3-** Acceder a la aplicación, copiando el link de debajo en el navegador.
 [http://localhost:8080](http://localhost:8080)
 
 ## 📝 Licencia
